@@ -8,8 +8,8 @@ module['exports'] = function helloWorld (hook) {
       'X-Requested-With': 'Content-Type'
     }
   })
-    .then(res => res.text())
-    .then(text => {
-      hook.res.json({text: "text"})
+    .then(res => res.json())
+    .then(json => {
+      hook.res.json({text: json})
     });
 }
