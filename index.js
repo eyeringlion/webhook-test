@@ -8,6 +8,10 @@ module['exports'] = function helloWorld (hook) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = myfunction;
   xmlhttp.open("GET", url);
+  xmlhttp.setRequestHeader(
+    'X-Custom-Header', 'value');
+
+  xmlhttp.withCredentials = true;
 
   xmlhttp.send(null);
   // hook.res.json({});
