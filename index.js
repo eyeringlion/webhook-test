@@ -5,7 +5,7 @@ module['exports'] = function helloWorld (hook) {
   var url = "https://locations-api.wework.com/api/v1/geogroupings/new-york-city--NY"; // site that doesn’t send Access-Control-*
   fetch(proxyurl + url, {
     headers: {
-      'X-Requested-With': 'XMLHttpRequest'
+      'X-Requested-With': 'Content-Type'
     }
   })
     .then(res => res.text())
