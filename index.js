@@ -4,10 +4,11 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 module['exports'] = function helloWorld (hook) {
+  var proxy = "https://cors-anywhere.herokuapp.com/";
   var url = "https://locations-api.wework.com/api/v1/geogroupings/new-york-city--NY";
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = myfunction;
-  xmlhttp.open("GET", url);
+  xmlhttp.open("GET", proxy + url);
   xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
   xmlhttp.setRequestHeader("Access-Control-Allow-Headers", "X-Requested-With");
 
