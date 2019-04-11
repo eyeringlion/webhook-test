@@ -11,7 +11,7 @@ module['exports'] = function helloWorld (hook) {
   xmlhttp.open("GET", url, true);
 
   xmlhttp.send(null);
-  // hook.res.json({});
+  hook.res.json({});
 
 
   function myfunction() {
