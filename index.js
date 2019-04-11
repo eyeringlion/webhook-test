@@ -4,7 +4,7 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 module['exports'] = function helloWorld (hook) {
-  var url = "https://locations-api.wework.com/api/v1/geogroupings/new-york-city--NY"";
+  var url = "https://locations-api.wework.com/api/v1/geogroupings/new-york-city--NY";
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = myfunction;
 
