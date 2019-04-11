@@ -8,10 +8,8 @@ module['exports'] = function helloWorld (hook) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = myfunction;
   xmlhttp.open("GET", url);
-  xmlhttp.setRequestHeader(
-    'X-Custom-Header', 'value');
-
-  xmlhttp.withCredentials = true;
+  xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+  xmlhttp.setRequestHeader("Access-Control-Allow-Headers", "X-Requested-With");
 
   xmlhttp.send(null);
   // hook.res.json({});
@@ -20,7 +18,7 @@ module['exports'] = function helloWorld (hook) {
   function myfunction() {
     if (xmlhttp.readyState == 4) {
       // var json = JSON.parse(xmlhttp.responseText);
-      hook.res.json({text: "text"});
+      hook.res.json({text: "123"});
     }
   }
 }
