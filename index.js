@@ -16,7 +16,7 @@ module['exports'] = function helloWorld (hook) {
   function myfunction() {
     if (xmlhttp.readyState == 4) {
       // var json = JSON.parse(xmlhttp.responseText);
-      hook.res.json({text: xmlhttp.responseText});
+      hook.res.json({text: "text"});
     }
   }
 }
