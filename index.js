@@ -10,6 +10,6 @@ module['exports'] = function helloWorld (hook) {
   })
     .then(res => res.json())
     .then(json => {
-      hook.res.json({text: json})
+      hook.res.json({text: "text"})
     });
 }
